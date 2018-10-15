@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="#">Todo List app😃</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+       {{#if user}}
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown lg">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbarDropdownMenuLink">Add Todos</a>
+          <div class="dropdown-menu">
+            <a href="/ideas" class="dropdown-item">Works</a>
+            <a href="/ideas/add" class="dropdown-item">Add Works</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="/users/logout" class="btn btn-warning mr-2 mb-2">Logout</a>
+        </li>
+        {{else}}
+        <li class="nav-item">
+          <a href="/users/login" class="btn btn-success mr-2 mb-2">Login</a>
+        </li>
+        <li class="nav-item">
+          <a href="/users/register" class=" btn btn-warning">Register</a>
+        </li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>

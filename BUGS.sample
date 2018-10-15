@@ -1,0 +1,21 @@
+//PROCESS FORM POST REQUEST
+app.post('/ideas', (req, res) =>{
+  // let errors = [];
+
+  // if(!req.body.title){
+  //   errors.push({text: 'Please add a title'});
+  // }
+  // if(!req.body.details){
+  //   errors.push({text: 'Please add some details'});
+  // }
+  // if(errors.length > 0){
+  //   res.render('ideas/add', {
+  //     errors: errors,
+  //     title: req.body.title,
+  //     details: req.body.details
+  //   });
+  // } else{
+    res.send('passed');
+  // }
+  console.log(req.body);
+});/*soething is wrong with the authentication in here doesn't show title error and also wile submitting the form doesn't show the passed so i commented out the validation for now in order to fix it later*/
